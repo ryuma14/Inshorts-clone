@@ -7,8 +7,6 @@ try{
     const skip=Number(request.query.page);
    let data =await News.find({}).limit(size).skip(size*skip);
    response.status(200).json(data)
-
-
 }catch(error){
     response.status(500).json(error)
     console.log('error')
